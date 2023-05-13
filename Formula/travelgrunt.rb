@@ -5,20 +5,20 @@
 class Travelgrunt < Formula
   desc "cd inside [mono]repos without fatigue!"
   homepage "https://github.com/ivanilves/travelgrunt"
-  version "0.4.2"
+  version "0.4.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ivanilves/travelgrunt/releases/download/v0.4.2/travelgrunt_v0.4.2_darwin_amd64.tar.gz"
-      sha256 "ab749608d5344dc2dcbbc78d7d9384dd0e6755fb3284ba70c2a2371251cecc01"
+    if Hardware::CPU.arm?
+      url "https://github.com/ivanilves/travelgrunt/releases/download/v0.4.3/travelgrunt_v0.4.3_darwin_arm64.tar.gz"
+      sha256 "bff65e406993685202be2dd917bfd1cb70b57a830e7af6b60550e1e0855d5db9"
 
       def install
         bin.install "travelgrunt"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ivanilves/travelgrunt/releases/download/v0.4.2/travelgrunt_v0.4.2_darwin_arm64.tar.gz"
-      sha256 "c344ccc4b61cf3dc053324cea1e2118082563ee45dee3a9c7ce6ab30896c03c7"
+    if Hardware::CPU.intel?
+      url "https://github.com/ivanilves/travelgrunt/releases/download/v0.4.3/travelgrunt_v0.4.3_darwin_amd64.tar.gz"
+      sha256 "dc431ed610d655b9eac159969749083670af45a276e933e7e5c5342394e39ac0"
 
       def install
         bin.install "travelgrunt"
@@ -28,16 +28,16 @@ class Travelgrunt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ivanilves/travelgrunt/releases/download/v0.4.2/travelgrunt_v0.4.2_linux_arm64.tar.gz"
-      sha256 "4010ca945d215985e67d44210acd5e95adbae24abd7c08cf3c7b8629de6ad09e"
+      url "https://github.com/ivanilves/travelgrunt/releases/download/v0.4.3/travelgrunt_v0.4.3_linux_arm64.tar.gz"
+      sha256 "70a5e5deda483cefc2782f928fbbf2105f29d2d50f3ae2be67a8f8090f1644a2"
 
       def install
         bin.install "travelgrunt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ivanilves/travelgrunt/releases/download/v0.4.2/travelgrunt_v0.4.2_linux_amd64.tar.gz"
-      sha256 "4bc5ba2053d60e2a0462a920ea41a16a2577d09991087bda54c4f1aa330a9db8"
+      url "https://github.com/ivanilves/travelgrunt/releases/download/v0.4.3/travelgrunt_v0.4.3_linux_amd64.tar.gz"
+      sha256 "71b516990509ac78da83453b8e22ae194faaea4c410bd3fb71703e2967ac357c"
 
       def install
         bin.install "travelgrunt"
